@@ -103,6 +103,21 @@
     height: 3vh;
     width: auto;
 }
+.search_bg{
+    background-color: transparent;
+    position:fixed;
+    z-index: 3;
+    top: 0.25vh;
+    right: 0vw;
+    width: 6vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+.search_bg:hover{
+    background-color: rgb(132, 131, 131);
+}
+
+
 .menu-icon{
     top: 0.50vh;
     position: fixed;
@@ -111,6 +126,22 @@
     height: 3vh;
     width: auto;
 }
+.menu_bg{
+    background-color: transparent;
+    position:fixed;
+    z-index: 3;
+    top: 0.25vh;
+    margin-left: 0vw;
+    width: 5.5vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.menu_bg:hover{
+    background-color: rgb(132, 131, 131);
+}
+
+
 
 ::-webkit-scrollbar{
     width: 0.5vw;
@@ -184,6 +215,10 @@ categories div p{
     color: rgb(224, 223, 223);
 
 }
+categories div:hover {
+    background-color: rgb(42, 42, 42);
+
+}
 
 .item{
     background-color: gray;
@@ -197,6 +232,9 @@ categories div p{
     z-index: 0;
     border-radius: 10px;
     
+}
+.item:hover{
+    background-color: rgb(96, 96, 96);
 }
 
 body{
