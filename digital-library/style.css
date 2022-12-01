@@ -1,0 +1,308 @@
+
+:root{
+    --cat_size:150px;
+}
+.player{
+    position: fixed;
+    border-radius: 10px;
+    width: 27vw;
+    height: 99vh;
+    top: 0.25vh;
+    bottom:0.25vh ;
+
+    background-color: rgb(108, 106, 106);
+    left: 0.5vw;
+
+}
+
+.play{
+    position: fixed;
+    z-index: 1;
+    max-width: 4vw;
+    margin-left: 11.5vw;
+    
+    bottom:3vh;
+
+
+}
+
+.main{
+    background: rgb(43, 43, 43);
+    border-radius: 10px;
+    width: inherit;
+    height: 25vh;
+    bottom:0px;
+    position:fixed;
+    z-index: 1;
+}
+
+.bg{
+    width: inherit;
+    height: 77vh;
+    border-radius: inherit;
+    object-fit: cover;
+    position: fixed;
+    object-position: 20% 0;
+
+}
+
+.playing-txt{
+    position: fixed;
+    padding-left: 1vw;
+    font-size: 1vw;
+    font-family: montserrat;
+    color: white;
+}
+
+.name-txt{
+    position: fixed;
+    padding-left: 1vw;
+    font-size:2.5vw;
+    font-family: montserrat;
+    color: white;
+}
+
+.head{
+    background-color: rgb(195, 192, 190);
+    height: 4vh;
+    top: 0.25vh;  /*4.5 */
+    position: fixed;
+    width: 71.5vw;
+    
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+    
+}
+.head_bg{
+    background-color: white;
+    height: 4.5vh;
+    width: 71.5vw;
+    margin-left: 27vw;
+    position: fixed;
+    z-index: 1;
+    top: 0vh;
+    
+}
+
+
+.search-text{
+    font-family: montserrat;
+    margin-top: 0.25vh;
+    position: sticky;
+    
+    font-weight: bold;
+    color: rgb(83, 81, 81);
+}
+
+.search-icon{
+    top: 0.50vh;
+    position: fixed;
+    right: 2vw;
+    width: 2.5vw;
+    height: 3vh;
+    width: auto;
+}
+.menu-icon{
+    top: 0.50vh;
+    position: fixed;
+    left: 29.5vw;
+    width: 2.5vw;
+    height: 3vh;
+    width: auto;
+}
+
+::-webkit-scrollbar{
+    width: 0.5vw;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(205, 205, 203);
+    
+    height: 0.5vh;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(105, 104, 104);
+}
+
+.cat-1{
+    
+    top:4.5vh;
+    position: relative;
+    width: 71.5vw;
+    margin-left: 27vw;
+    border-radius: 10px;
+    height: var(--cat_size);          
+    background-color: rgb(56, 54, 54);
+}
+.cat-2{
+    
+    top:5.25vh;
+    position: relative;
+    width: 71.5vw;
+    margin-left: 27vw;
+    border-radius: 10px;
+    height: var(--cat_size);
+    background-color: rgb(56, 54, 54);
+}
+.cat-3{
+    
+    top:6vh;
+    position: relative;
+    width: 71.5vw;
+    margin-left: 27vw;
+    border-radius: 10px;
+    height: var(--cat_size);
+    background-color: rgb(56, 54, 54);
+}
+.cat-4{
+    
+    top:7vh;
+    position: relative;
+    width: 71.5vw;
+    margin-left: 27vw;
+    border-radius: 10px;
+    height: var(--cat_size);
+    background-color: rgb(56, 54, 54);
+}
+.cat-5{
+    
+    top:8vh;
+    position: relative;
+    width: 71.5vw;
+    margin-left: 27vw;
+    border-radius: 10px;
+    height: var(--cat_size);
+    background-color: rgb(56, 54, 54);
+}
+
+categories div p{
+    padding-left:10px ;
+    padding-top: 5px ;
+    font-family: montserrat;
+    font-weight: bold;
+    color: rgb(224, 223, 223);
+
+}
+
+.item{
+    background-color: gray;
+    float: left;
+    height: 70px;
+    margin-left:15px ;
+    padding-left: 10px;
+    padding-top: 20px;
+    width: 60px;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    
+}
+
+body{
+    background-color: white;
+}
+
+.item p{
+    font-size: 10px;
+    font-weight: 400;
+    padding-top: 60px;
+}
+
+@media screen and (max-width:420px) {
+   .cat{
+    
+        
+        margin-left:1vw;
+        right: 1vw;
+        width: auto;
+        
+
+   }
+   .player{
+        height:15vh;
+        width: auto;
+        left: 0.75vw;
+        right: 0.75vw;
+        top: unset;
+        position: fixed;
+        z-index: 2;
+        bottom: 0.25vh;
+    }
+
+    .play{
+        bottom: 2vh;
+        left: 50vw;
+        max-width: 3vh;
+
+    }
+
+    .main{
+        
+        bottom: 0.5vh;
+        right: 1.25vw;
+        width: 66vw;
+        height: 14vh;
+        
+        position:absolute;
+        z-index: 3;
+    }
+
+    .bg{
+        padding-top: 0.5vh;
+        padding-left: 0.6vh;
+        width: 29vw;
+        height: 14vh;
+        object-position: 50% 0;
+    }
+
+    .playing-txt{
+        position: fixed;
+        padding-left: 2vw;
+        font-size: 3vw;
+        
+    }
+    
+    .name-txt{
+        position: fixed;
+        padding-left: 2vw;
+        font-size:6vw;
+        
+    }
+
+    .head{
+        
+        height: 4vh;
+         
+        position: fixed;
+        width: 95.5vw;
+        
+        
+        
+    }
+    .head_bg{
+        
+        height: 4.5vh;
+        width: 98vw;
+        margin-left: 0vw;
+        
+        
+    }
+    
+    
+    .search-icon{
+        top: 0.50vh;
+        position: fixed;
+        right: 4.5vw;
+        height: 3vh;
+        width: auto;
+    }
+    .menu-icon{
+        top: 0.50vh;
+        position: fixed;
+        left: 4.5vw;
+        height: 3vh;
+        width: auto;
+    }
+
+}
