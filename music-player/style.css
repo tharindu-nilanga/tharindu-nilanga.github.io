@@ -11,13 +11,13 @@ body{
     font-family: monospace;
     overflow: hidden;
 }
-.search>h1{
+.header>h1{
     font-size: 3.5vh;
     text-align: center;
     color: #cbcbcb;
     margin: 0.5vh;
 }
-.search{
+.header{
     
     
     height: 5vh;

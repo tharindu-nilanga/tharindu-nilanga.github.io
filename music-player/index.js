@@ -63,22 +63,34 @@ const setMusic = (i) => {
     
     
 }
-
-setMusic(0);
+let song_num = 0;
+setMusic(song_num);
 
 
 
 item1.addEventListener('click', () => {
-    setMusic(0);
+    setMusic(song_num+1);
     if(!playButton.className.includes('pause')){playButton.classList.toggle('pause');}
 })
 item2.addEventListener('click', () => {
-    setMusic(1);
+    setMusic(song_num+1);
     if(!playButton.className.includes('pause')){playButton.classList.toggle('pause');}
 })
 item3.addEventListener('click', () => {
-    setMusic(2);
+    setMusic(song_num+1);
     if(!playButton.className.includes('pause')){playButton.classList.toggle('pause');}
     
 })
 
+//seekBar
+
+setInterval(() => {
+        seekBar.value = music.currentTime;
+        currentTime.innerHTML = formatTime(music.currentTime);
+    
+}, 500)
+
+seekBar.addEventListener('change', () => {
+      seekBar.value = music.currentTime;  
+            
+})
