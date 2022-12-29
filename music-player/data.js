@@ -14,7 +14,7 @@ let songs = [
         
     },
     {
-        name: 'wishYouBest',
+        name: 'wishU',
         path: 'music/Wish-You-The-Best.mp3',
         author: '',
         cover: 'covers/wish-you-the-best.jpg'

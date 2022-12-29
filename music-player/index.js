@@ -63,21 +63,21 @@ const setMusic = (i) => {
     
     
 }
-let song_num = 0;
-setMusic(song_num);
+
+setMusic(0);
 
 
 
 item1.addEventListener('click', () => {
-    setMusic(song_num+1);
+    setMusic(0);
     if(!playButton.className.includes('pause')){playButton.classList.toggle('pause');}
 })
 item2.addEventListener('click', () => {
-    setMusic(song_num+1);
+    setMusic(1);
     if(!playButton.className.includes('pause')){playButton.classList.toggle('pause');}
 })
 item3.addEventListener('click', () => {
-    setMusic(song_num+1);
+    setMusic(2);
     if(!playButton.className.includes('pause')){playButton.classList.toggle('pause');}
     
 })

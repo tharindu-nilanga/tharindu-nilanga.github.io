@@ -204,14 +204,14 @@ body{
 
 .i1{
     background-image: url(covers/shiver.jpg);
-    background-size: cover
+    background-size: cover;
 }
 .i2{
     background-image: url(covers/alone.jpg);
-    background-size: cover
+    background-size: cover;
 }
 .i3{
     background-image: url(covers/wish-you-the-best.jpg);
-    background-size: cover
+    background-size: cover;
 }
 
