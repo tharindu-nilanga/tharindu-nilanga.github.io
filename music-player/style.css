@@ -37,6 +37,9 @@ body{
 
     
 }
+.content::-webkit-scrollbar{
+    width: 0;
+}
 .content *+*{
     margin-top: 0.5vh;
 }
@@ -63,6 +66,7 @@ body{
 
 }
 .content div:nth-child(5) .i{
+    width: 120px;
     border-radius: 50%;
 }
 
@@ -70,13 +74,22 @@ body{
     margin-top: 1px;
     z-index: 6;
     height: 120px;
-    width: 120px;
+    width: 200px;
     margin-left: 1.5vw;
     background-color: #2c2a2a;
     border-radius: 5px;
+    background-position: 0;
 } 
+.gradient-overlay{
+    
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%,rgba(0, 0, 0,100) 100%);
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
 .flex{
-    width: 1200px;
+    width: 20000px;
     display: flex;
     flex-direction: row;
 }
@@ -218,12 +231,39 @@ body{
     background-image: url(covers/shiver.jpg);
     background-size: cover;
 }
+.i1::before{
+    content: 'Shiver';
+    color: rgba(232, 232, 232, 0.742);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:20px;
+    font-weight: 500;
+}
 .i2{
     background-image: url(covers/alone.jpg);
     background-size: cover;
+    
+}
+.i2::before{
+    content: 'Alone';
+    color: rgba(232, 232, 232, 0.742);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:20px;
+    font-weight: 500;
 }
 .i3{
     background-image: url(covers/wish-you-the-best.jpg);
     background-size: cover;
 }
-
+.i3::before{
+    content: 'WishU';
+    color: rgba(232, 232, 232, 0.742);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:20px;
+    font-weight: 500;
+}
