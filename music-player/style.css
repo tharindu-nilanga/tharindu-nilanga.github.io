@@ -1,0 +1,276 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #414345;
+    position: relative;
+    font-family: 'montserrat',sans-serif;
+    overflow: hidden;
+}
+.header>h1{
+    font-size: 5vw;
+    text-align: center;
+    color: #eaeaea;
+    padding: 5px;
+    font-weight:700;
+}
+.header{
+    
+    
+    
+    width: 100%;
+    background-color: #5a5a5a;
+    
+}
+.content{
+    margin-top: 1vh;
+    
+    width: 100%;
+    height: 90vh;
+   
+    overflow: scroll;
+
+    
+}
+.content::-webkit-scrollbar{
+    width: 0;
+}
+.content *+*{
+    margin-top: 0.5vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.category{
+    
+    z-index: 6;
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+}
+.scroll{
+    overflow-x: scroll;
+}
+.category>h1{
+    color:#e4e2e2;
+    font-size: 20px;
+    font-weight: 670;
+    margin-left: 5px;
+
+}
+.content div:nth-child(5) .i{
+    width: 120px;
+    border-radius: 50%;
+}
+
+.i{
+    margin-top: 1px;
+    z-index: 6;
+    height: 120px;
+    width: 200px;
+    margin-left: 1.5vw;
+    background-color: #2c2a2a;
+    border-radius: 5px;
+    background-position: 0;
+} 
+.gradient-overlay{
+    
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%,rgba(0, 0, 0,100) 100%);
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+.flex{
+    width: 20000px;
+    display: flex;
+    flex-direction: row;
+}
+
+.player{
+    position: absolute;
+    bottom:20vh;
+    right: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    padding: 15px;
+    background-color: #282929;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+}
+.cover{
+    margin-left: 15px;
+    width: 11vh;
+    height:11vh;
+    background-image: url(covers/Shiver.jpg);
+    background-size: cover;
+    
+}
+.section-main{
+    flex-grow: 1;
+    margin-right: 12px;
+    margin-left: 12px;
+   
+    
+}
+.section-1{
+    display: flex;
+    column-gap: 28vw;
+}
+
+.name{
+    text-transform: capitalize;
+    font-size: medium;
+    margin-bottom: 2vh;
+    color: #b9b9b9;
+    
+    
+}
+
+
+
+
+.seek-bar{
+    -webkit-appearance:none;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: gray;
+    cursor: pointer;
+    overflow: hidden;
+}
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width: 0.1px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #a2d3c6;
+    box-shadow: -400px 0 0 400px #a2d3c6;
+}
+
+.current-time,
+.song-duration{
+    
+    font-size: 11px;    
+    color: aliceblue;
+}
+.song-duration{
+    float: right;
+    
+}
+
+.play-button{
+    position: absolute;
+    right: 3vw;
+    border: none;
+    background-color: #dddada;
+    width: 35px;
+    height: 35px;
+    border-radius:50%;
+    cursor: pointer;
+}
+.play-button span{
+    position: absolute;
+    width: 6px;
+    height: 20px;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    background-color: #6a6767;
+    border-radius: 2px;
+    transition: .2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.play-button span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+.play-button.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+
+.play-button.pause span:nth-child(1){
+    width: 40%;
+    left: 36%;
+    border-radius: 2px;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-button.pause{
+    animation: pulse 5s linear infinite;
+}
+@keyframes pulse{
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 60%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    75%{
+        opacity: 60%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.scroll::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.i1{
+    background-image: url(covers/shiver.jpg);
+    background-size: cover;
+}
+.i1::before{
+    content: 'Shiver';
+    color: rgba(232, 232, 232, 0.742);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:20px;
+    font-weight: 500;
+}
+.i2{
+    background-image: url(covers/alone.jpg);
+    background-size: cover;
+    
+}
+.i2::before{
+    content: 'Alone';
+    color: rgba(232, 232, 232, 0.742);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:20px;
+    font-weight: 500;
+}
+.i3{
+    background-image: url(covers/wish-you-the-best.jpg);
+    background-size: cover;
+}
+.i3::before{
+    content: 'WishU';
+    color: rgba(232, 232, 232, 0.742);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size:20px;
+    font-weight: 500;
+}
