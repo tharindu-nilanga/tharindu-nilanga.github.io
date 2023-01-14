@@ -8,11 +8,14 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'montserrat',sans-serif;
+    overflow: hidden;
 }
 html{
     scroll-behavior: smooth;
     scroll-margin-top: 2vh;
+
 }
+
 nav{
     display: flex;
     column-gap: 1vw;
@@ -52,5 +55,23 @@ nav>div.popup:hover::after{
 }
 .logoIcon{
     width: 100px;
+}
+.banners{
+    height: 200px;
+    width: 100%;
+}
+.flex{
     align-items: center;
+    display: flex;
+    height: inherit;
+    width: fit-content;
+    overflow-x: scroll;
+}
+
+.flex>div{
+    background-color: #666666;
+    border-radius: 10px;
+    height: 90%;
+    width: 90vw;
+    margin: 0 3vw 0 3vw;
 }
