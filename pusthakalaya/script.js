@@ -12,8 +12,10 @@
 //     }
 // }
 const banners = document.querySelector('.banners')
-banners.style.backgroundColor = 'red'
+
 banners.scroll({
-    left=0
+    left: 352
 }
 )
+const scrollPosition = banners.getBoundingClientRect()
+console.log(scrollPosition)
