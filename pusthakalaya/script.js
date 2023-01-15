@@ -14,7 +14,7 @@
 const banners = document.querySelector('.banners')
 
 banners.scroll({
-    left: 352
+    left: 325
 }
 )
 const scrollPosition = banners.getBoundingClientRect()
