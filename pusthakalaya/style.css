@@ -60,7 +60,9 @@ nav>div.popup:hover::after{
     height: 200px;
     width: 100%;
     overflow-x: scroll;
+    
 }
+
 
 .flex{
     align-items: center;
@@ -75,5 +77,5 @@ nav>div.popup:hover::after{
     border-radius: 10px;
     height: 90%;
     width: 90vw;
-    margin: 0 3vw 0 3vw;
+    margin: 0 0.5vw 0 0.5vw;
 }
