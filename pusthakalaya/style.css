@@ -8,7 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'montserrat',sans-serif;
-    overflow: hidden;
+
 }
 html{
     scroll-behavior: smooth;
@@ -59,13 +59,14 @@ nav>div.popup:hover::after{
 .banners{
     height: 200px;
     width: 100%;
+    overflow-x: scroll;
 }
 .flex{
     align-items: center;
     display: flex;
     height: inherit;
     width: fit-content;
-    overflow-x: scroll;
+    
 }
 
 .flex>div{

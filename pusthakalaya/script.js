@@ -11,3 +11,9 @@
 
 //     }
 // }
+const banners = document.querySelector('.banners')
+banners.style.backgroundColor = 'red'
+banners.scroll({
+    left=0
+}
+)
