@@ -79,3 +79,16 @@ nav>div.popup:hover::after{
     width: 90vw;
     margin: 0 2px 0 2px;
 }
+
+
+.grid{
+    display: grid;
+    width: 100%;
+    height: 400px;
+    grid-area: 3fr 5fr 3fr 5fr;
+    
+    column-gap:5px;
+}
+/* .item{
+    aspect-ratio: ;
+} */
