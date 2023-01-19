@@ -56,7 +56,7 @@ nav>div.popup:hover::after{
 .logoIcon{
     width: 100px;
 }
-.banners{
+.banner_scroll{
     height: 200px;
     width: 100%;
     overflow-x: scroll;
@@ -92,3 +92,46 @@ nav>div.popup:hover::after{
 /* .item{
     aspect-ratio: ;
 } */
+
+::-webkit-scrollbar{
+    display: none;
+}
+@supports(scrollbar-color : red blue){
+    *{
+        scrollbar-color: red blue;
+        scrollbar-width: none;
+    }
+}
+
+
+.banners{
+    position: relative;
+}
+.arrows>div{
+    background-color: #999999;
+    position: absolute;
+    top: 45%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100vw;
+    color: rgb(217, 255, 0);
+}
+.arrows{
+    opacity: 0;
+}
+
+.left_arrow{
+    left: 20px;
+    rotate: 180deg;
+}
+.right_arrow{
+    right: 20px;
+}
+@media only screen and (min-width: 600px){
+    .arrows{
+        opacity: 100;
+    }
+}

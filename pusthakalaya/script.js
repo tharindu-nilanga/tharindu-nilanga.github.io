@@ -11,11 +11,21 @@
 
 //     }
 // }
-const banners = document.querySelector('.banners')
+const banners = document.querySelector('.banner_scroll')
 
 banners.scroll({
     left: 325
 }
 )
+function scrollRight(){
+    banners.scroll({
+        right:10
+    })
+}
+function scrollLeft(){
+    banners.scroll({
+        left:10
+    })
+}
 const scrollPosition = banners.getBoundingClientRect()
 console.log(scrollPosition)
