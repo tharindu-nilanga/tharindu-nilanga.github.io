@@ -15,14 +15,15 @@ html{
     scroll-margin-top: 2vh;
 
 }
-
+/* nav */
 nav{
     display: flex;
     column-gap: 1vw;
     background-color: rgb(231, 231, 231);
     justify-content: space-between;
-    padding: 0 2vw 0 2vw ;
+    padding: 0 10px 0 10px ;
     align-items: center;
+    position: relative;
 }
 .menuIcon,
 .searchIcon,
@@ -56,14 +57,37 @@ nav>div.popup:hover::after{
 .logoIcon{
     width: 100px;
 }
+.search2{
+    position: absolute;
+    border: 2px dashed;
+    right: 10px;
+    background: #e7e7e7;
+    width: 100%;
+    height: 100%;
+}
+.form{
+    display: flex;
+}
+.searchInput{
+    font-size: 1rem;
+    flex-grow: 5;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+}
+.submitButton{
+    width: 40px;
+    background-color: aquamarine;
+    border: none;
+}
+
+/* banner */
 .banner_scroll{
     height: 200px;
     width: 100%;
     overflow-x: scroll;
     
 }
-
-
 .flex{
     align-items: center;
     display: flex;
@@ -100,8 +124,6 @@ nav>div.popup:hover::after{
         scrollbar-width: none;
     }
 }
-
- 
 .banners{
     position: relative;
 }
@@ -137,7 +159,7 @@ nav>div.popup:hover::after{
     right: 0;
 }
 
-
+/* welcome */
 .arrow_down>img{
     width: 50px;
 }
@@ -162,8 +184,15 @@ nav>div.popup:hover::after{
 .welcome>div:first-child{
     font-weight: 600;
 }
+
+
+
 @media only screen and (min-width: 600px){
     .arrows{
         opacity: 100;
     }
 }
+
+/* p{
+    pointer-events: none;
+} */

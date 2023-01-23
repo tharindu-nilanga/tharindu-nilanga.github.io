@@ -29,10 +29,13 @@ function scrollRight(){
     banners.scroll(scrollPosition,0)
     console.log(scrollPosition);
 }
-
+function refresh(){
+    location.reload()
+}
 leftArrow.addEventListener('click', scrollLeft)
 rightArrow.addEventListener('click', scrollRight)
 window.addEventListener("resize", updateSize);       
+window.addEventListener("resize", refresh);       
 
 console.log(updateSize()/100*91*3)
 console.log(scrollPosition)
