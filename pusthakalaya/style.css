@@ -69,7 +69,8 @@ nav>div.popup:hover::after{
     display: flex;
     height: inherit;
     width: fit-content;
-    margin: 0 5px 0 5px;
+    margin-left:5vw;
+    padding-right: 5vw;
 }
 
 .flex>div{
@@ -77,18 +78,13 @@ nav>div.popup:hover::after{
     border-radius: 10px;
     height: 90%;
     width: 90vw;
+}
+.flex>*+*:not(:last-child){
     margin: 0 2px 0 2px;
+
 }
 
 
-.grid{
-    display: grid;
-    width: 100%;
-    height: 400px;
-    grid-area: 3fr 5fr 3fr 5fr;
-    
-    column-gap:5px;
-}
 /* .item{
     aspect-ratio: ;
 } */
@@ -103,32 +99,52 @@ nav>div.popup:hover::after{
     }
 }
 
-
+ 
 .banners{
     position: relative;
 }
 .arrows>div{
-    background-color: #999999;
+    background-color: rgba(55, 51, 51, 0.532);
+    height: 180px;
     position: absolute;
-    top: 45%;
+    top: 10px;
     width: 30px;
-    height: 30px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100vw;
-    color: rgb(217, 255, 0);
+    
+}
+.arrows>div:hover{
+    background-color: rgba(55, 51, 51, 0.752);
+
 }
 .arrows{
     opacity: 0;
 }
 
-.left_arrow{
-    left: 20px;
-    rotate: 180deg;
+.left_arrow>img{
+    
+    rotate: -90deg;
+}
+.right_arrow>img{
+    
+    rotate: 90deg;
 }
 .right_arrow{
-    right: 20px;
+    right: 0;
+}
+.grid{
+    margin-inline: 0px 10px;
+    display: grid;
+    width: 628px;
+    height: 300px;
+    grid-area: 3fr 5fr 3fr 5fr;
+    column-gap:5px;
+    row-gap: 5px;
+}
+.item{
+    background-color: #666666;
 }
 @media only screen and (min-width: 600px){
     .arrows{

@@ -1,31 +1,27 @@
-// const body = document.querySelector('body')
-// const container = document.querySelector('nav')
-// const doc = document.documentElement
 
-// function changeSibling(className){
-//     const element = document.querySelector(className);
-//     if(element.nextElementSibling == null){
-//         container.children[0].style.backgroundColor = 'var(--eggplant)'
-//     }else{
-//         element.nextElementSibling.style.backgroundColor = 'var(--eggplant)'
-
-//     }
-// }
 const banners = document.querySelector('.banner_scroll')
+const rightArrow = document.querySelector('.right_arrow')
+const leftArrow = document.querySelector('.left_arrow')
 
-banners.scroll({
-    left: 325
+banners.scroll(0,0)
+
+let scrollPosition = 0
+function updateSize(){
+    let viewportWidth = window.innerWidth;
+    return viewportWidth;
 }
-)
-function scrollRight(){
-    banners.scroll({
-        right:10
-    })
-}
+updateSize()
 function scrollLeft(){
-    banners.scroll({
-        left:10
-    })
+    scrollPosition -= updateSize();
+    banners.scroll(scrollPosition,0 )
 }
-const scrollPosition = banners.getBoundingClientRect()
-console.log(scrollPosition)
+leftArrow.addEventListener('click', scrollLeft)
+function scrollRight(){
+    scrollPosition += updateSize();
+    banners.scroll(scrollPosition,0)
+}
+rightArrow.addEventListener('click', scrollRight)
+
+
+window.addEventListener("resize", updateSize);       
+console.log(updateSize())
