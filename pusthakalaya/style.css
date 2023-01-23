@@ -7,9 +7,9 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'montserrat',sans-serif;
-    pointer-events: none;
+    font-family: 'montserrat',sans-serif;  
 }
+
 html{
     scroll-behavior: smooth;
     scroll-margin-top: 2vh;
@@ -59,14 +59,31 @@ nav>div.popup:hover::after{
 }
 .search2{
     position: absolute;
-    border: 2px dashed;
     right: 2%;
     background: #e7e7e7;
     height: 100%;
-    display: flex;
     align-items: center;
     width: 96vw;
+    opacity: 0;
+    display: none;
+       
+       
 }
+.search2.on{
+    display: flex;
+    animation: fadeIn 5ms ;
+    opacity: 100%;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+
+}
+
 .form{
     display: flex;
     width: 100%;
@@ -76,17 +93,18 @@ nav>div.popup:hover::after{
     border: none;
     border-bottom: 2px solid black;
     background: transparent;
-    width: 100%;
+    width: 98%;
+    margin-right: 2%;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 .searchInput:focus{
-    outline: 2px solid rgb(144, 75, 242);
+    outline:none;
+    border-color: blue;
 }
-.submitButton{
+.searchIcon2{
     width: 40px;
     background-color: aquamarine;
-    border: none;
 }
 
 /* banner */
@@ -171,6 +189,7 @@ nav>div.popup:hover::after{
 .arrow_down>img{
     width: 50px;
 }
+
 .welcome{
     display: flex;
     flex-direction: column;
@@ -179,6 +198,7 @@ nav>div.popup:hover::after{
     margin-block: 10px;
     padding-block: 5px;
     border-block: 2px dashed;
+    pointer-events: none;
 }
 .arrow_down{
     margin-top: 20px;
