@@ -9,20 +9,31 @@ function updateSize(){
     return viewportWidth;
 }
 updateSize()
-banners.scroll([updateSize()*2],0)
+function defaultScrollPosition(){
+    scrollPosition = updateSize()/100*91;
+    banners.scroll([updateSize()/100*91],0)
+}
+defaultScrollPosition()
 
 function scrollLeft(){
-    scrollPosition -= updateSize();
+    if(scrollPosition != 0){
+        scrollPosition -= updateSize()/100*91;
+    }
     banners.scroll(scrollPosition,0 )
+    console.log(scrollPosition);
+}
+function scrollRight(){
+    if(scrollPosition != updateSize()/100*91*2){
+        scrollPosition += updateSize()/100*91;
+    }
+    banners.scroll(scrollPosition,0)
+    console.log(scrollPosition);
 }
 
 leftArrow.addEventListener('click', scrollLeft)
-function scrollRight(){
-    scrollPosition += updateSize();
-    banners.scroll(scrollPosition,0)
-}
 rightArrow.addEventListener('click', scrollRight)
-
-
 window.addEventListener("resize", updateSize);       
+
+console.log(updateSize()/100*91*3)
+console.log(scrollPosition)
 console.log(updateSize())

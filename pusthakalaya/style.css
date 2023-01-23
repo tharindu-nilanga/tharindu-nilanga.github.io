@@ -83,7 +83,9 @@ nav>div.popup:hover::after{
     margin: 0 2px 0 2px;
 
 }
-
+.flex>div:nth-child(2n+1){
+    background: #999999;
+}
 
 /* .item{
     aspect-ratio: ;
