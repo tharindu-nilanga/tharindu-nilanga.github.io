@@ -148,7 +148,7 @@ nav>div.popup:hover::after{
     font-size: 1.25rem;
     margin-block: 10px;
     padding-block: 5px;
-    border: 2px dashed;
+    border-block: 2px dashed;
 }
 .arrow_down{
     margin-top: 20px;
