@@ -9,7 +9,7 @@ function updateSize(){
     return viewportWidth;
 }
 updateSize()
-banners.scroll([updateSize*2],0)
+banners.scroll([updateSize()*2],0)
 
 function scrollLeft(){
     scrollPosition -= updateSize();
