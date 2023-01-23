@@ -8,7 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'montserrat',sans-serif;
-
+    pointer-events: none;
 }
 html{
     scroll-behavior: smooth;
@@ -79,6 +79,9 @@ nav>div.popup:hover::after{
     width: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+.searchInput:focus{
+    outline: 2px solid rgb(144, 75, 242);
 }
 .submitButton{
     width: 40px;
