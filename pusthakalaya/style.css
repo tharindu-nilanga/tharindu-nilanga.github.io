@@ -77,6 +77,8 @@ nav>div.popup:hover::after{
     border-bottom: 2px solid black;
     background: transparent;
     width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 .submitButton{
     width: 40px;
