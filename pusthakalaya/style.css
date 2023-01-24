@@ -1,0 +1,255 @@
+:root{
+--primary-white:rgb(231, 231, 231);
+--dark1: #999999;
+--dark2: #666666;
+--primary-orange: #ff5a5f;
+--secondary-orange:#f57175;
+--light-green:#d6f9dd;
+--dark-green:#041f1e;
+--calm-blue:#809bce;
+--brown:#5d4e60;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'montserrat',sans-serif;  
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-margin-top: 2vh;
+
+}
+/* nav */
+nav{
+    display: flex;
+    column-gap: 1vw;
+    background-color: var(--primary-white);
+    justify-content: space-between;
+    padding: 0 2% 0 2% ;
+    align-items: center;
+    position: relative;
+}
+.menuIcon,
+.searchIcon,
+.logoIcon{
+    width: 40px;
+}
+.menuIcon,
+.searchIcon{
+    background: var(--secondary-orange);
+    border-radius: 100vw;
+    padding: 2px;
+}
+nav>div.popup{
+    padding: 0;
+    border-radius: 65%;
+    position: relative;
+}
+nav>div.popup::after{
+    content: attr(about);
+    text-transform: capitalize;
+    background-color: rgba(28, 27, 27, 0.762);
+    border-radius: 4px;
+    padding: 2px;    
+    font-size: 11px;
+    color: rgb(225, 225, 225);
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    z-index: 2;
+    
+    opacity: 0;
+}
+nav>div.popup:hover::after{
+    opacity: 100;
+    transition: all 0.2s 0.3s;
+}
+.logoIcon{
+    width: 100px;
+}
+
+/* search */
+.search2{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    align-items: center;
+    width: 100vw;
+    opacity: 0;
+    display: none;
+       
+}
+@keyframes fillIn {
+    0%{
+        clip-path: circle(0.0% at 100% 50%);
+    }
+    100%{
+        clip-path: circle(111.8% at 100% 50%);
+    }
+
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+
+}
+.search2.on{
+    display: flex;
+    animation: fadeIn 5ms ;
+    animation: fillIn 1s;
+    opacity: 100%;
+    background: var(--light-green);
+}
+
+
+.form{
+    display: flex;
+    width: 100%;
+    padding-inline: 4%;
+}
+.searchInput{
+    margin: 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-color: #041f1e00;
+    transition: all 300ms;
+}
+.searchInput:focus{
+    outline:none;
+    border-color: var(--dark-green);
+}
+
+/* menu */
+.menu{
+    position: absolute;
+}
+
+
+/* banner */
+.banner_scroll{
+    height: 200px;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    
+}
+.flex{
+    align-items: center;
+    display: flex;
+    height: inherit;
+    width: fit-content;
+    margin-left:5vw;
+    padding-right: 5vw;
+}
+
+.flex>div{
+    background-color: #666666;
+    border-radius: 10px;
+    height: 90%;
+    width: 90vw;
+}
+.flex>*+*:not(:last-child){
+    margin: 0 2px 0 2px;
+
+}
+.flex>div:nth-child(2n+1){
+    background: #999999;
+}
+
+/* .item{
+    aspect-ratio: ;
+} */
+
+::-webkit-scrollbar{
+    display: none;
+}
+@supports(scrollbar-color : red blue){
+    *{
+        scrollbar-color: red blue;
+        scrollbar-width: none;
+    }
+}
+.banners{
+    position: relative;
+}
+.arrows>div{
+    background-color: rgba(55, 51, 51, 0.532);
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.arrows>div:hover{
+    background-color: rgba(55, 51, 51, 0.752);
+
+}
+.arrows{
+    opacity: 0;
+}
+
+.left_arrow>img{
+    
+    rotate: -90deg;
+}
+.right_arrow>img{
+    
+    rotate: 90deg;
+}
+.right_arrow{
+    right: 0;
+}
+
+/* welcome */
+.arrow_down>img{
+    width: 50px;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-block: 10px;
+    padding-block: 5px;
+    border-block: 2px dashed;
+    pointer-events: none;
+}
+.arrow_down{
+    margin-top: 20px;
+}
+.hi{
+    color: rgba(28, 27, 27, 0);
+    background: url('icons/hi.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.welcome>div:first-child{
+    font-weight: 600;
+}
+
+
+
+@media only screen and (min-width: 600px){
+    .arrows{
+        opacity: 100;
+    }
+}
+
+/* p{
+    pointer-events: none;
+} */
