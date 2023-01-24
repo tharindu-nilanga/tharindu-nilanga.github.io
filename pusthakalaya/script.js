@@ -37,17 +37,20 @@ window.addEventListener("resize", updateSize);
 // snap
 
 function snap(){
+    console.log(`scrollLeft = ${banners.scrollLeft}`) 
+    console.log(`rightCondition = ${updateSize()/100*91*focusCard/100*120}`) 
+    console.log(`leftCondition = ${updateSize()/100*91*focusCard/100*80}`) 
     // left
-    if(banners.scrollLeft < updateSize()/100*focusCard/100*50 && focusCard!=0){
+    if(banners.scrollLeft < updateSize()/100*focusCard/100*80 && focusCard!=0){
         focusCard -= 1
         banners.scroll([updateSize()/100*91*focusCard],0)
     }
     // right
-    else if(banners.scrollLeft > updateSize()/100*91*focusCard/100*50 && focusCard!=2){
+    if(banners.scrollLeft > updateSize()/100*91*focusCard/100*120 && focusCard!=2){
         focusCard += 1
         banners.scroll([updateSize()/100*91*focusCard],0)
     }
-    console.log(banners.scrollLeft) 
+    
 }
 banners.addEventListener('scroll',snap)
 
