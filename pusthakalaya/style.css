@@ -80,11 +80,14 @@ nav>div.popup:hover::after{
     display: none;
        
 }
-.search2.on{
-    display: flex;
-    animation: fadeIn 5ms ;
-    opacity: 100%;
-    background: var(--light-green);
+@keyframes fillIn {
+    0%{
+        clip-path: circle(0.0% at 100% 50%);
+    }
+    100%{
+        clip-path: circle(111.8% at 100% 50%);
+    }
+
 }
 @keyframes fadeIn {
     0%{
@@ -95,6 +98,14 @@ nav>div.popup:hover::after{
     }
 
 }
+.search2.on{
+    display: flex;
+    animation: fadeIn 5ms ;
+    animation: fillIn 1s;
+    opacity: 100%;
+    background: var(--light-green);
+}
+
 
 .form{
     display: flex;
