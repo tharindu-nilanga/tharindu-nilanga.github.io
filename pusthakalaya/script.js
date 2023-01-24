@@ -13,21 +13,22 @@ function updateSize(){
 }
 let focusCard = 1;
 updateSize()
+
 function defaultCard(){
-    banners.scroll([updateSize()/100*91*focusCard], 0)
+    banners.scrollLeft = updateSize()/100*91*focusCard
 }
 defaultCard()
 
 function scrollLeft(){
     if(focusCard != 0){
         focusCard -= 1
-        banners.scroll([updateSize()/100*91*focusCard], 0)
+        banners.scrollLeft = updateSize()/100*91*focusCard
     }
 }
 function scrollRight(){
     if(focusCard != 2){
         focusCard += 1
-        banners.scroll([updateSize()/100*91*focusCard], 0)
+        banners.scrollLeft = updateSize()/100*91*focusCard
     }
 }
 leftArrow.addEventListener('click', scrollLeft)
@@ -37,22 +38,24 @@ window.addEventListener("resize", updateSize);
 // snap
 
 function snap(){
-    console.log(`scrollLeft = ${banners.scrollLeft}`) 
-    console.log(`rightCondition = ${updateSize()/100*91*focusCard/100*120}`) 
-    console.log(`leftCondition = ${updateSize()/100*91*focusCard/100*80}`) 
     // left
-    if(banners.scrollLeft < updateSize()/100*focusCard/100*80 && focusCard!=0){
+    if(banners.scrollLeft <= updateSize()/100*focusCard/100*80 && focusCard!=0){
         focusCard -= 1
-        banners.scroll([updateSize()/100*91*focusCard],0)
+        banners.scrollLeft = updateSize()/100*91*focusCard
     }
     // right
-    if(banners.scrollLeft > updateSize()/100*91*focusCard/100*120 && focusCard!=2){
+    if(banners.scrollLeft >= updateSize()/100*91*focusCard/100*120 && focusCard!=2){
         focusCard += 1
-        banners.scroll([updateSize()/100*91*focusCard],0)
+        banners.scrollLeft = updateSize()/100*91*focusCard
     }
     
 }
-banners.addEventListener('scroll',snap)
+while (true){
+    console.log(`scrollLeft = ${banners.scrollLeft}`) 
+    console.log(`rightCondition = ${updateSize()/100*91*focusCard/100*120}`) 
+    console.log(`leftCondition = ${updateSize()/100*91*focusCard/100*80}`) 
+    snap()
+}
 
 
 //search

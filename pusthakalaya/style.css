@@ -1,10 +1,13 @@
 :root{
+--primary-white:rgb(231, 231, 231);
 --dark1: #999999;
 --dark2: #666666;
---primary-color: #ff5a5f;
+--primary-orange: #ff5a5f;
+--secondary-orange:#f57175;
 --light-green:#d6f9dd;
 --dark-green:#041f1e;
-
+--calm-blue:#809bce;
+--brown:#5d4e60;
 }
 *{
     box-sizing: border-box;
@@ -21,7 +24,7 @@ html{
 nav{
     display: flex;
     column-gap: 1vw;
-    background-color: rgb(231, 231, 231);
+    background-color: var(--primary-white);
     justify-content: space-between;
     padding: 0 2% 0 2% ;
     align-items: center;
@@ -34,7 +37,7 @@ nav{
 }
 .menuIcon,
 .searchIcon{
-    background: var(--primary-color);
+    background: var(--secondary-orange);
     border-radius: 100vw;
     padding: 2px;
 }
@@ -69,18 +72,19 @@ nav>div.popup:hover::after{
 /* search */
 .search2{
     position: absolute;
-    right: 2%;
-    background: #e7e7e7;
+    right: 0;
     height: 100%;
     align-items: center;
-    width: 96vw;
+    width: 100vw;
     opacity: 0;
-    display: none;     
+    display: none;
+       
 }
 .search2.on{
     display: flex;
     animation: fadeIn 5ms ;
     opacity: 100%;
+    background: var(--light-green);
 }
 @keyframes fadeIn {
     0%{
@@ -95,20 +99,23 @@ nav>div.popup:hover::after{
 .form{
     display: flex;
     width: 100%;
+    padding-inline: 4%;
 }
 .searchInput{
+    margin: 0;
     font-size: 1rem;
     border: none;
     border-bottom: 2px solid black;
     background: transparent;
     width: 100%;
-    margin-right: 2%;
     -webkit-appearance: none;
     -moz-appearance: none;
+    border-color: #041f1e00;
+    transition: all 300ms;
 }
 .searchInput:focus{
     outline:none;
-    border-color: blue;
+    border-color: var(--dark-green);
 }
 
 /* menu */
@@ -122,6 +129,7 @@ nav>div.popup:hover::after{
     height: 200px;
     width: 100%;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     
 }
 .flex{
