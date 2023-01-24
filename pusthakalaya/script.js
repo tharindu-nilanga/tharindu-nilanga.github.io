@@ -2,40 +2,55 @@
 
 
 //banners
+
 const banners = document.querySelector('.banner_scroll')
 const rightArrow = document.querySelector('.right_arrow')
 const leftArrow = document.querySelector('.left_arrow')
 
-let scrollPosition = 0
 function updateSize(){
     let viewportWidth = window.innerWidth;
     return viewportWidth;
 }
+let focusCard = 1;
 updateSize()
-function defaultScrollPosition(){
-    scrollPosition = updateSize()/100*91;
-    banners.scroll([updateSize()/100*91],0)
+function defaultCard(){
+    banners.scroll([updateSize()/100*91*focusCard], 0)
 }
-defaultScrollPosition()
+defaultCard()
 
 function scrollLeft(){
-    if(scrollPosition != 0){
-        scrollPosition -= updateSize()/100*91;
+    if(focusCard != 0){
+        focusCard -= 1
+        banners.scroll([updateSize()/100*91*focusCard], 0)
     }
-    banners.scroll(scrollPosition,0 )
-    console.log(scrollPosition);
 }
 function scrollRight(){
-    if(scrollPosition != updateSize()/100*91*2){
-        scrollPosition += updateSize()/100*91;
+    if(focusCard != 2){
+        focusCard += 1
+        banners.scroll([updateSize()/100*91*focusCard], 0)
     }
-    banners.scroll(scrollPosition,0)
-    console.log(scrollPosition);
 }
-
 leftArrow.addEventListener('click', scrollLeft)
 rightArrow.addEventListener('click', scrollRight)
 window.addEventListener("resize", updateSize);
+
+// snap
+
+function snap(){
+    // left
+    if(banners.scrollLeft < updateSize()/100*focusCard/100*50 && focusCard!=0){
+        focusCard -= 1
+        banners.scroll([updateSize()/100*91*focusCard],0)
+    }
+    // right
+    else if(banners.scrollLeft > updateSize()/100*91*focusCard/100*50 && focusCard!=2){
+        focusCard += 1
+        banners.scroll([updateSize()/100*91*focusCard],0)
+    }
+    console.log(banners.scrollLeft) 
+}
+banners.addEventListener('scroll',snap)
+
 
 //search
 let searchBarToggleClicks = 0;
@@ -44,7 +59,6 @@ const bodySection = document.querySelector('.body')
 const searchEnable = document.querySelector('.searchIcon')
 const searchBar = document.querySelector('.search2')
 const searchInput = document.querySelector('.searchInput')
-const searchDisable = document.querySelector('.searchIcon2')
 
 //search enable
 function enableSearchBar(){
@@ -60,16 +74,7 @@ function diableSearchBar(){
         searchBarToggleClicks = 0
     }
 }
-function incrementSearchBarToggleClicks(){
-    searchBarToggleClicks += 1;
-}
-if (searchBarToggleClicks == 2){
-    searchBar.classList.remove('on')
-    searchBarToggleClicks = 0
-}
-
 searchEnable.addEventListener('click',enableSearchBar)
-searchDisable.addEventListener('click', diableSearchBar)
 bodySection.addEventListener('click', diableSearchBar)
 // refresh
 function refresh(){
