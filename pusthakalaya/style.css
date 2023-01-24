@@ -85,7 +85,7 @@ nav>div.popup:hover::after{
         clip-path: circle(0.0% at 100% 50%);
     }
     100%{
-        clip-path: circle(111.8% at 100% 50%);
+        clip-path: circle(200% at 100% 50%);
     }
 
 }
@@ -100,7 +100,6 @@ nav>div.popup:hover::after{
 }
 .search2.on{
     display: flex;
-    animation: fadeIn 5ms ;
     animation: fillIn 1s;
     opacity: 100%;
     background: var(--light-green);
@@ -123,10 +122,13 @@ nav>div.popup:hover::after{
     -moz-appearance: none;
     border-color: #041f1e00;
     transition: all 300ms;
+
 }
 .searchInput:focus{
     outline:none;
     border-color: var(--dark-green);
+    animation: fadeIn 0.5s ;
+
 }
 
 /* menu */
@@ -157,6 +159,7 @@ nav>div.popup:hover::after{
     border-radius: 10px;
     height: 90%;
     width: 90vw;
+    cursor: pointer;
 }
 .flex>*+*:not(:last-child){
     margin: 0 2px 0 2px;

@@ -38,24 +38,23 @@ window.addEventListener("resize", updateSize);
 // snap
 
 function snap(){
-    // left
-    if(banners.scrollLeft <= updateSize()/100*focusCard/100*80 && focusCard!=0){
-        focusCard -= 1
-        banners.scrollLeft = updateSize()/100*91*focusCard
-    }
-    // right
-    if(banners.scrollLeft >= updateSize()/100*91*focusCard/100*120 && focusCard!=2){
-        focusCard += 1
-        banners.scrollLeft = updateSize()/100*91*focusCard
-    }
-    
+        // left
+        console.log('INTERVAL')
+        if(banners.scrollLeft <= updateSize()/100*focusCard/100*90 && focusCard!=0){
+            focusCard -= 1
+            banners.scrollLeft = updateSize()/100*91*focusCard
+        }
+        // right
+        if(banners.scrollLeft >= updateSize()/100*91*focusCard/100*110 && focusCard!=2){
+            focusCard += 1
+            banners.scrollLeft = updateSize()/100*91*focusCard
+        }
 }
-while (true){
-    console.log(`scrollLeft = ${banners.scrollLeft}`) 
-    console.log(`rightCondition = ${updateSize()/100*91*focusCard/100*120}`) 
-    console.log(`leftCondition = ${updateSize()/100*91*focusCard/100*80}`) 
-    snap()
+function snapWithInterval(){
+    setInterval(snap, 10000)
 }
+banners.addEventListener('scroll', snap)
+banners.addEventListener('scroll', snapWithInterval)
 
 
 //search
@@ -82,10 +81,10 @@ function diableSearchBar(){
 }
 searchEnable.addEventListener('click',enableSearchBar)
 bodySection.addEventListener('click', diableSearchBar)
-// refresh
-function refresh(){
-    if(!searchBar.classList.contains('on')){
-    location.reload()}
-}
-window.addEventListener("resize", refresh);       
+// // refresh
+// function refresh(){
+//     if(!searchBar.classList.contains('on')){
+//     location.reload()}
+// }
+// window.addEventListener("resize", refresh);       
 
