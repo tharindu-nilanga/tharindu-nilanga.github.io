@@ -40,22 +40,17 @@ window.addEventListener("resize", updateSize);
 function snap(){
         // left
         console.log('INTERVAL')
-        if(banners.scrollLeft <= updateSize()/100*focusCard/100*90 && focusCard!=0){
+        if(banners.scrollLeft <= updateSize()/100*focusCard/100*95 && focusCard!=0){
             focusCard -= 1
             banners.scrollLeft = updateSize()/100*91*focusCard
         }
         // right
-        if(banners.scrollLeft >= updateSize()/100*91*focusCard/100*110 && focusCard!=2){
+        if(banners.scrollLeft >= updateSize()/100*91*focusCard/100*105 && focusCard!=2){
             focusCard += 1
             banners.scrollLeft = updateSize()/100*91*focusCard
         }
 }
-function snapWithInterval(){
-    setInterval(snap, 10000)
-}
 banners.addEventListener('scroll', snap)
-banners.addEventListener('scroll', snapWithInterval)
-
 
 //search
 let searchBarToggleClicks = 0;

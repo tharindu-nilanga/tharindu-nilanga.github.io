@@ -245,14 +245,32 @@ nav>div.popup:hover::after{
     font-weight: 600;
 }
 
+.category{
+    width: 100vw;
+    overflow-x: scroll;
+}
+.container{
+    display: flex;
+    width: fit-content;
+    column-gap: 2px;
+}
+.category{
+    margin-bottom: 20px;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background: #666666;
+}
+.item::after{
+    content: 'item';
+    position: absolute;
+    bottom: -2;
 
-
+}
 @media only screen and (min-width: 600px){
     .arrows{
         opacity: 100;
     }
 }
 
-/* p{
-    pointer-events: none;
-} */
