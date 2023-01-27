@@ -1,7 +1,8 @@
 // initial
 const loader = document.querySelector('.loader')
-loader.addEventListener('load',() => {
-    loader.classList.add('on')
+
+window.addEventListener('load',() => {
+    loader.classList.remove('on')
 })
 
 //banners
