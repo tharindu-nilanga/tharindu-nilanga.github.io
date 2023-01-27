@@ -262,12 +262,7 @@ nav>div.popup:hover::after{
     height: 100px;
     background: #666666;
 }
-.item::after{
-    content: 'item';
-    position: absolute;
-    bottom: -2;
 
-}
 @media only screen and (min-width: 600px){
     .arrows{
         opacity: 100;
