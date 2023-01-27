@@ -134,27 +134,41 @@ nav>div.popup:hover::after{
 .menu{
     position: absolute;
     background: #809bce;
-    display: flex;
     flex-direction: row;
     border-radius: 100vw;
     left: 1.5%;
+    opacity: 0;
+    display: none;
+}
+.menu.on{
+    opacity: 100%;
+    display: flex;
 }
 .menu>div{
-    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.menu>div>img{
+.menu>div:not(:first-child){
+    padding-inline: 10px;
+    padding-block: 3px;
+    margin-block: 4px;
+}
+.menu>div:not(:last-child):not(:first-child){
+    border-right: 1px solid var(--dark-green);
+}
+.menu>div:not(:first-child)>img{
     width: 30px;
 }
 .menuDisable{
-    padding: 5px;
     background: var(--light-green);
     border-radius: 100vw;
     justify-content: center;
-    
+    width: 55px;    
 }
 .menuDisableIcon{
     rotate: -90deg;
-    
+    width: 30px;
 }
 /* banner */
 .banner_scroll{

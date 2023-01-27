@@ -88,10 +88,13 @@ function refresh(){
 window.addEventListener("resize", refresh);       
 
 //menu
-const menuBtn = document.querySelector('.menu')
-const menuIcon = document.querySelector('.menuIcon')
-const menuIcon2 = document.querySelector('.menuDisable')
+const menuEnable = document.querySelector('.menuIcon')
+const menuDisable = document.querySelector('.menuDisable')
+const menu = document.querySelector('.menu')
 
-menuBtn.addEventListener('click',() => {
-    menuBtn.classList.add('on')
+menuEnable.addEventListener('click',() => {
+    menu.classList.add('on')
+})
+menuDisable.addEventListener('click',() => {
+    menu.classList.remove('on')
 })
