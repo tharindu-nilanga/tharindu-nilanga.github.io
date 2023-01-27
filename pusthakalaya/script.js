@@ -79,10 +79,19 @@ function diableSearchBar(){
 }
 searchEnable.addEventListener('click',enableSearchBar)
 bodySection.addEventListener('click', diableSearchBar)
-// // refresh
-// function refresh(){
-//     if(!searchBar.classList.contains('on')){
-//     location.reload()}
-// }
-// window.addEventListener("resize", refresh);       
+banners.addEventListener('scroll', diableSearchBar)
+// refresh
+function refresh(){
+    if(!searchBar.classList.contains('on')){
+    location.reload()}
+}
+window.addEventListener("resize", refresh);       
 
+//menu
+const menuBtn = document.querySelector('.menu')
+const menuIcon = document.querySelector('.menuIcon')
+const menuIcon2 = document.querySelector('.menuDisable')
+
+menuBtn.addEventListener('click',() => {
+    menuBtn.classList.add('on')
+})

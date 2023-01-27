@@ -91,7 +91,7 @@ nav>div.popup:hover::after{
 }
 @keyframes fadeIn {
     0%{
-        opacity: 0;
+        opacity: 30%;
     }
     100%{
         opacity: 100%;
@@ -100,7 +100,7 @@ nav>div.popup:hover::after{
 }
 .search2.on{
     display: flex;
-    animation: fillIn 1s;
+    animation: fillIn 0.5s;
     opacity: 100%;
     background: var(--light-green);
 }
@@ -115,12 +115,12 @@ nav>div.popup:hover::after{
     margin: 0;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--dark-green);
     background: transparent;
     width: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-color: #041f1e00;
+    border-color: rgba(4, 31, 30, 30%);
     transition: all 300ms;
 
 }
@@ -128,15 +128,34 @@ nav>div.popup:hover::after{
     outline:none;
     border-color: var(--dark-green);
     animation: fadeIn 0.5s ;
-
 }
 
 /* menu */
 .menu{
     position: absolute;
+    background: #809bce;
+    display: flex;
+    flex-direction: row;
+    border-radius: 100vw;
+    left: 1.5%;
 }
-
-
+.menu>div{
+    width: 60px;
+}
+.menu>div>img{
+    width: 30px;
+}
+.menuDisable{
+    padding: 5px;
+    background: var(--light-green);
+    border-radius: 100vw;
+    justify-content: center;
+    
+}
+.menuDisableIcon{
+    rotate: -90deg;
+    
+}
 /* banner */
 .banner_scroll{
     height: 200px;
