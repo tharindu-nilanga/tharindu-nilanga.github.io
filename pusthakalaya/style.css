@@ -68,6 +68,23 @@ nav>div.popup:hover::after{
 .logoIcon{
     width: 100px;
 }
+/* loader */
+.loadingAnimation{
+    height: 45px;
+}
+.loader{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    background: var(--primary-white);
+    justify-content: center;
+    opacity: 0;
+    display: none;
+}
+.loader.on{
+    opacity: 100%;
+    display: flex;
+}
 
 /* search */
 .search2{
@@ -75,7 +92,7 @@ nav>div.popup:hover::after{
     right: 0;
     height: 100%;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     opacity: 0;
     display: none;
        
@@ -139,11 +156,29 @@ nav>div.popup:hover::after{
     left: 1.5%;
     opacity: 0;
     display: none;
+    clip-path: circle(0% at -100% 50%);
 }
 .menu.on{
     opacity: 100%;
     display: flex;
+    transition: all 2s;
+    clip-path: circle(200% at 100% 50%);
 }
+.menu>div:not(:first-child){
+    translate: -100% 0;
+}
+.menu.on>div{
+    transition: all 1s;
+}
+.menu.on>div.accountIcon{
+    translate: 0 0;}
+.menu.on>div.browseIcon{
+    translate: 0 0;}
+.menu.on>div.settingsIcon{
+    translate: 0 0;}
+.menu.on>div.aboutIcon{
+    translate: 0 0;}
+
 .menu>div{
     display: flex;
     justify-content: center;
@@ -291,9 +326,16 @@ nav>div.popup:hover::after{
     margin-bottom: 20px;
 }
 .item{
-    width: 100px;
-    height: 100px;
-    background: #666666;
+    display: flex;
+    flex-direction: column;
+}
+.cover{
+    width: 150px;
+    height: 150px;
+    background: #999999;
+}
+.name{
+    text-align:center;
 }
 
 @media only screen and (min-width: 600px){

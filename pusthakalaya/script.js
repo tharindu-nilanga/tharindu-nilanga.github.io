@@ -1,5 +1,8 @@
 // initial
-
+const loader = document.querySelector('.loader')
+loader.addEventListener('load',() => {
+    loader.classList.add('on')
+})
 
 //banners
 
@@ -20,15 +23,20 @@ function defaultCard(){
 defaultCard()
 
 function scrollLeft(){
-    if(focusCard != 0){
+    console.log(banners.scrollLeft)
+    console.log(focusCard)
+
+    if(focusCard > 0){
         focusCard -= 1
-        banners.scrollLeft = updateSize()/100*91*focusCard
+        banners.scrollLeft = updateSize()/100*91*focusCard/100*80
     }
 }
 function scrollRight(){
-    if(focusCard != 2){
+    console.log(banners.scrollLeft)
+    console.log(focusCard)
+    if(focusCard < 2){
         focusCard += 1
-        banners.scrollLeft = updateSize()/100*91*focusCard
+        banners.scrollLeft = updateSize()/100*91*focusCard/100*120
     }
 }
 leftArrow.addEventListener('click', scrollLeft)
