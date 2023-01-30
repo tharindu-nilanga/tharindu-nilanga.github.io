@@ -44,10 +44,11 @@ leftArrow.addEventListener('click', scrollLeft)
 rightArrow.addEventListener('click', scrollRight)
 window.addEventListener("resize", updateSize);
 
-// snap
+// snap & dotIndicators
 
 
 setInterval(() => {
+    const dotIndicator = document.querySelector(`.dotIndicator${focusCard}`)
     // left
         if(banners.scrollLeft < updateSize()/100*91*focusCard/100*95 && focusCard>0){
             focusCard -= 1
@@ -61,6 +62,10 @@ setInterval(() => {
         else{
             banners.scrollLeft = updateSize()/100*91*focusCard
         }
+    
+    dotIndicator.style.backgroundColor = 'var(--dark2)'
+    dotIndicator.style.width = '20px'
+    
 }, 1000);            
 
 

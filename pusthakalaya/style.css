@@ -152,8 +152,11 @@ nav>div.popup:hover::after{
     position: absolute;
     background: #809bce;
     flex-direction: row;
-    border-radius: 100vw;
-    left: 1.5%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
     opacity: 0;
     display: none;
     clip-path: circle(0% at -100% 50%);
@@ -161,14 +164,17 @@ nav>div.popup:hover::after{
 .menu.on{
     opacity: 100%;
     display: flex;
-    transition: all 2s;
+    transition: all 0.5s;
     clip-path: circle(200% at 100% 50%);
 }
-.menu>div:not(:first-child){
+.menu>div{
     translate: -100% 0;
 }
+.menu.on>div:hover{
+    background: #90a6d0;
+}
 .menu.on>div{
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .menu.on>div.accountIcon{
     translate: 0 0;}
@@ -184,22 +190,34 @@ nav>div.popup:hover::after{
     justify-content: center;
     align-items: center;
 }
-.menu>div:not(:first-child){
+.menu>div{
     padding-inline: 10px;
     padding-block: 3px;
     margin-block: 4px;
+    flex-grow: 1;
 }
-.menu>div:not(:last-child):not(:first-child){
+.menu>div:not(:last-child){
     border-right: 1px solid var(--dark-green);
 }
-.menu>div:not(:first-child)>img{
+.menu>div>img{
     width: 30px;
 }
 .menuDisable{
     background: var(--light-green);
     border-radius: 100vw;
-    justify-content: center;
-    width: 55px;    
+    justify-content: center; 
+    align-items: center;
+    width: 40px;  
+    padding: 2px;
+    outline: 0.5px solid #041f1e2d;
+    position: absolute;
+    opacity: 0;
+    display: none;
+}
+.menu.on +.menuDisable{
+    opacity: 100%;
+    display: flex;
+    z-index: 4;
 }
 .menuDisableIcon{
     rotate: -90deg;
@@ -283,6 +301,18 @@ nav>div.popup:hover::after{
 }
 .right_arrow{
     right: 0;
+}
+.dotIndicators{
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+}
+.dotIndicators>div{
+    width: 10px;
+    height: 10px;
+    border-radius: 100vw;
+    background: var(--dark1);
+    transition: all 0.5s;
 }
 
 /* welcome */
