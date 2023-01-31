@@ -69,15 +69,29 @@ nav>div.popup:hover::after{
     width: 100px;
 }
 /* loader */
-.loadingAnimation{
-    height: 45px;
+.loader.on>.loadingAnime{
+    height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 100vw;
+    border: 4px dotted var(--primary-orange);
+    animation: rotate 1.5s infinite;
+}
+@keyframes rotate {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
 }
 .loader{
     position: absolute;
     width: 100%;
+    height: 100%;
     z-index: 2;
     background: var(--primary-white);
     justify-content: center;
+    align-items: center;
     opacity: 0;
     display: none;
 }
@@ -145,6 +159,9 @@ nav>div.popup:hover::after{
     outline:none;
     border-color: var(--dark-green);
     animation: fadeIn 0.5s ;
+}
+:target{
+    background: rgba(255, 105, 105, 0.859)(230, 74, 74)(230, 74, 74);
 }
 
 /* menu */
@@ -348,9 +365,10 @@ nav>div.popup:hover::after{
     overflow-x: scroll;
 }
 .container{
+    margin-left: 10px;
     display: flex;
     width: fit-content;
-    column-gap: 2px;
+    column-gap: 5px;
 }
 .category{
     margin-bottom: 20px;
@@ -358,11 +376,13 @@ nav>div.popup:hover::after{
 .item{
     display: flex;
     flex-direction: column;
+    
 }
 .cover{
     width: 150px;
     height: 150px;
     background: #999999;
+    border-radius: 5%;
 }
 .name{
     text-align:center;
