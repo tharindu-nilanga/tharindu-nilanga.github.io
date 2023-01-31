@@ -252,6 +252,7 @@ nav>div.popup:hover::after{
     align-items: center;
     display: flex;
     height: inherit;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left:5vw;
     padding-right: 5vw;
@@ -367,6 +368,7 @@ nav>div.popup:hover::after{
 .container{
     margin-left: 10px;
     display: flex;
+    width: -moz-fit-content;
     width: fit-content;
     column-gap: 5px;
 }
