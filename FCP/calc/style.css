@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(244, 251, 251);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Open sans;
+    font-weight: 900;
+}
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 10px;
+    background: rgb(243, 243, 243);
+    border: 1px solid rgb(189, 201, 202);
+    border-radius: 10px;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+#btn1, #btn2, #btn3, #btn4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1.5/1;
+    padding: 15px;
+    font-size: 20px;
+    background: rgb(153, 203, 209);
+    border: none;
+    border-radius: 10px;
+}
+h1{
+    color: rgb(52, 95, 109);
+}
+.inputs{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}
+#num1,#num2{
+    aspect-ratio: 1/0.5;
+    width: 100px;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    padding-inline: 5px;
+}
+#num1:invalid, #num2:invalid{
+    border-color: rgb(241, 84, 84);
+}
+.answer{
+    margin-top: 10px;
+    background: rgb(243, 243, 243);
+    border: 1px solid rgb(189, 201, 202);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding-block: 10px;
+    color: gray;
+    overflow: hidden;
+}
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover{
+    background: rgb(122, 184, 178);
+}

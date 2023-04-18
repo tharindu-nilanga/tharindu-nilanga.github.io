@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid saddlebrown; */
+}
+body{
+    font-family: david;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* nav */
+.nav{
+    display: flex;
+    column-gap: 10px;
+    background: rgb(214, 214, 214);
+    justify-content: space-evenly;
+    padding-block: 5px;
+}
+#search{
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 50%;
+}
+#search::-webkit-input-placeholder{
+    text-align: center;
+}
+account{
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gray;
+    padding-inline: 1.5%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+logo{
+    font-size: 2rem;
+    font-weight: 900;   
+}
+
+
+/* content */
+.content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* container  */
+.container{
+    background: rgb(169, 168, 168);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 5px;
+}
+.pic{
+    height: 100px;
+}
+.item{
+    background: rgb(209, 204, 204);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.main{
+    background: black;
+    color: aliceblue;
+    padding: 5px;
+}
+.sec1{
+    display: flex;
+    flex-direction: column;
+}
+name{
+   font-weight: 900; 
+   font-size: 1.2rem;
+}
+price{
+    font-weight: 900;
+    margin-top: 10px;
+}
+discount{
+    font-size: 1rem;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    padding-block: 10px;
+}
+.buttons>div{
+    padding: 5px;
+    padding-inline: 10%;
+    border-radius: 100vw;
+}
+.buttons>div:hover{
+    background: rgb(177, 177, 177);
+}
+.counter{
+    border-radius: 10px;
+    background: rgb(84, 84, 84);
+    padding: 10px;
+}
+.head{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+.items{
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+}
+.cart_item{
+    background: rgb(191, 191, 191);
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+}
+.cart_item_name{
+    width: 90%;
+}
+.dash_board{
+    margin-top: 10px;
+    border-top: 2px solid;
+    padding-top: 10px;
+}
+.dash_board>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 30px;
+    padding-block: 3px;
+}
+.total_text{
+    font-weight: 900;
+}
+.total>.amount{
+    font-weight: 900;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 10px;
+}
+.buttons>button{
+    width: 25%;
+    padding: 5px;
+}

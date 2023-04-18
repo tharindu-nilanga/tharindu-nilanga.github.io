@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data-sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="sec1">
+            <h1>Data Sheet</h1>
+
+            <div class="table">
+                <div class="back">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="records">
+                    <div class="record">
+                        <span class="name">name</span>
+                        <span class="year">year</span>
+                        <span class="town">town</span>
+                    </div>
+                    <div class="record">
+                        <span class="name">name</span>
+                        <span class="year">year</span>
+                        <span class="town">town</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="input_section">
+            <div data-active="1" class="name_input">
+                <input name="name" type="text" id="inputName" maxlength="12" placeholder="Insert Name">
+                <button id="nameInBtn">
+                    <i class="fa-solid fa-flag"></i>
+                </button>
+            </div>
+            <div data-active="0" class="year_input">
+                <input name="year" type="number" min="1943" max="2023" id="inputYear" placeholder="Insert Year">
+                <button id="yearInBtn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div data-active="0" class="town_input">
+                <input name="town" type="text" id="inputTown" maxlength="12" placeholder="Insert Town">
+                <button id="townInBtn">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

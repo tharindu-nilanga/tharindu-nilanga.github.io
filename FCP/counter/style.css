@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(69, 75, 83);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: open sans;
+}
+.container{
+    background: linear-gradient(rgb(69, 75, 83),rgb(56, 61, 67),rgb(69, 75, 83)) ;
+    padding: 20px;
+    padding-inline: 35px;
+}
+.counter{
+    font-size: 80px;
+    font-weight: 800;
+    color: rgb(170, 178, 184);
+    translate: 0 -40px;
+    opacity: 100;
+}
+.counter.on{
+    animation: counter 1s;    
+}
+/* @keyframes counter {
+    0%{
+        opacity: 0;
+        translate: 0 40px;
+    }
+    50%{
+        opacity: 100%;
+    }
+    40%{
+        translate: 0 0;
+    }
+    50%{
+        translate: 0 0;
+    }
+    100%{
+        opacity: 0%;
+    }
+} */
