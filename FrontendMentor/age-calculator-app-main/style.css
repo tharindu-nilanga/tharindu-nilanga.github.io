@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  font-family: "poppins";
+  padding-inline: 1em;
+  background: hsl(0, 0%, 94%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main {
+  background: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 1.2em;
+  border-radius: 1.2em 1.2em 6em 1.2em;
+}
+main form {
+  position: relative;
+  width: 100%;
+  display: grid;
+  border-bottom: 2px solid hsl(0, 0%, 94%);
+}
+main form fieldset {
+  all: unset;
+  display: flex;
+  width: 100%;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  padding-bottom: 3rem;
+}
+@media (min-width: 700px) {
+  main form fieldset {
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: flex-start;
+  }
+  main form fieldset div {
+    display: inline-flex;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main form fieldset div input {
+    width: 4em;
+  }
+}
+main form div {
+  flex: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main form div input {
+  width: 100%;
+  font-size: clamp(1.5rem, 3vw, 38px);
+  font-family: inherit;
+  border-radius: 0.3em;
+  border: 1px solid hsl(0, 0%, 86%);
+  padding: 0.2em 0.4em;
+}
+main form div input:focus {
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+}
+main form div label {
+  color: hsl(0, 1%, 44%);
+  font-size: clamp(1rem, 1.5vw, 19px);
+  letter-spacing: 0.1em;
+}
+main form div small {
+  font-size: clamp(0.7rem, 1.2vw, 15px);
+  display: none;
+}
+main form div input:invalid {
+  border-color: hsl(0, 100%, 67%);
+}
+main form div label:has(+ input:invalid) {
+  color: hsl(0, 100%, 67%);
+}
+main form div input:invalid + small {
+  color: hsl(0, 100%, 67%);
+  display: inline;
+}
+main form #submit {
+  background: hsl(0, 1%, 44%);
+  border: none;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  padding: 0.4em;
+  left: 50%;
+}
+@media (min-width: 700px) {
+  main form #submit {
+    left: unset;
+    right: 0;
+    transform: translate(0, 50%);
+    width: min(6vw, 87px);
+  }
+}
+main form #submit:hover {
+  background: hsl(259, 100%, 65%);
+  transition: all 100ms;
+  padding: 0.5em;
+  box-shadow: 0 0 5px;
+}
+main form #submit:hover img {
+  width: 55%;
+}
+main form #submit img {
+  width: 50%;
+  height: auto;
+}
+main .output {
+  line-height: 1em;
+  padding-top: 3rem;
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(3.5rem, 8vw, 120px);
+  padding-right: 1em;
+  color: hsl(0, 0%, 8%);
+}
+main .output span {
+  color: hsl(259, 100%, 65%);
+}/*# sourceMappingURL=style.css.map */
