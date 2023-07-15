@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <form id="form">
+      <fieldset>
+        <div>
+          <label for="dayInput" id="dayLabel">DAY</label>
+          <input id="dayInput" type="number" min="1" max="31" placeholder="DD">
+          <small><i>must be a valid day</i></small>
+        </div>
+        <div>
+          <label for="monthInput" id="monthLabel">MONTH</label>
+          <input id="monthInput" type="number" min="1" max="12" placeholder="MM">
+          <small><i>must be a valid month</i></small>
+        </div>
+        <div>
+          <label for="yearInput" id="yearLabel">YEAR</label>
+          <input id="yearInput" type="number" min="1900" placeholder="YYYY">
+          <small><i>must be a valid year</i></small>
+        </div>
+      </fieldset>
+      <button id="submit">
+        <img src="./assets/images/icon-arrow.svg" alt="">
+      </button>
+    </form>
+    <div class="output">
+      <span id="year">--</span> years<br>
+      <span id="month">--</span> months<br>
+      <span id="day">--</span> days<br>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">tharindu nilanga</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
