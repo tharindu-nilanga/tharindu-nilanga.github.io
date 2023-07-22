@@ -1,0 +1,259 @@
+/* SCSS RGB */
+/* SCSS Gradient */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 3vw, 20px);
+}
+
+.hero__text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 6vw, 50px);
+}
+.hero__text p {
+  font-family: "Montserrat", sans-serif;
+}
+
+#skills h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3.5vw, 35px);
+}
+#skills .skills__container .skills__item figcaption {
+  font-family: "Inconsolata", monospace;
+}
+
+#about h2, #contact h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3.5vw, 35px);
+}
+#about p, #contact p {
+  font-family: "Roboto", sans-serif;
+}
+#about a, #contact a {
+  font-family: "Inconsolata", monospace;
+}
+
+footer small {
+  font-size: clamp(0.7rem, 1.5vw, 15px);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #333333;
+  color: rgb(252, 250, 249);
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  overflow-x: hidden;
+  overflow-anchor: none;
+}
+
+.bg_anime {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+.bg_anime .blob,
+.bg_anime .blobBlue {
+  filter: blur(40px);
+  top: 0;
+  left: 0;
+  width: 80%;
+  position: absolute;
+}
+
+header {
+  padding-inline: 0.5em;
+  padding-top: 0.5em;
+}
+header nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.147);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+header nav .nav__img {
+  height: 100%;
+}
+header nav .nav__img img {
+  height: 100%;
+}
+header nav .nav__blob {
+  left: 3em;
+  position: absolute;
+  width: 4em;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  background-color: rgb(252, 250, 249);
+  filter: blur(35px);
+  z-index: -1;
+}
+header .hero {
+  display: flow-root;
+  margin-top: 1.5em;
+}
+header .hero .hero__text {
+  text-align: center;
+}
+header .hero .hero__text a {
+  color: white;
+}
+header .hero .hero__img {
+  width: 100%;
+}
+header .hero .hero__img img {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  header .hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  header .hero .hero__text {
+    text-align: left;
+    margin-left: 1.5em;
+  }
+}
+
+main {
+  padding-inline: 0.5em;
+}
+main #skills h2 {
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+main #skills .skills__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+}
+main #skills .skills__container figure {
+  padding: 0.5em;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.147);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+main #skills .skills__container figure:hover {
+  background: rgba(67, 170, 139, 0.193);
+  transition: all 300ms;
+}
+main #skills .skills__container figure .skills__item__blob {
+  position: absolute;
+  width: 3em;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  background-color: rgb(252, 250, 249);
+  filter: blur(30px);
+  z-index: -1;
+}
+main #skills .skills__container figure div img {
+  width: 100%;
+}
+main #skills .skills__container figure figcaption {
+  text-align: center;
+}
+@media (min-width: 800px) {
+  main #skills .skills__container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+main #about,
+main #contact {
+  margin-top: 2em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.196);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+main #about__blob,
+main #contact__blob {
+  position: absolute;
+  width: 5em;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  background-color: rgb(252, 250, 249);
+  filter: blur(50px);
+  z-index: -1;
+}
+main #about p,
+main #contact p {
+  margin-top: 0.4em;
+}
+main #about:hover,
+main #contact:hover {
+  background: rgba(236, 11, 67, 0.067);
+  transition: all 500ms;
+}
+main #about h2,
+main #contact h2 {
+  padding-block: 0.2em;
+}
+main #about a,
+main #contact a {
+  color: #7b8cde;
+}
+main #about a:hover,
+main #contact a:hover {
+  color: rgb(67, 170, 139);
+}
+main #about p {
+  padding-bottom: 0.5em;
+}
+main #about a {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 0.3em;
+}
+main #about a::after {
+  content: ">";
+}
+main #about a:hover::after {
+  content: " >";
+}
+
+footer {
+  padding: 0.5em 1em;
+  margin-top: 2em;
+  width: 100%;
+  background: #232323;
+  text-align: center;
+  line-height: 1.2em;
+  border-radius: 1em 1em 0 0;
+}
+footer small {
+  opacity: 0.9;
+}
+footer a {
+  color: rgb(252, 250, 249);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+// Define the font variables
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+$heading-font: "Playfair Display", serif;
+$code-font: "Inconsolata", monospace;
+
+body{
+    font-family: $primary-font;
+    font-size: clamp(1rem, 3vw, 20px);
+}
+.hero__text{
+    h1{
+        font-family: $heading-font;
+        font-size: clamp(2rem, 6vw, 50px);
+    }
+    p{
+        font-family: $secondary-font;
+    }
+}
+#skills{
+    h2{
+        font-family: $heading-font;
+        font-size: clamp(1.5rem, 3.5vw, 35px);
+    }
+    .skills__container{
+        .skills__item{
+            figcaption{
+                font-family: $code-font;
+                
+            }
+        }
+    }
+}
+#about, #contact{
+    h2{
+        font-family: $heading-font;
+        font-size: clamp(1.5rem, 3.5vw, 35px);
+    }
+    p{
+     font-family: $primary-font ;
+    }
+    a{
+        font-family: $code-font;
+    }
+}
+footer{
+    small{
+        font-size: clamp(.7rem, 1.5vw, 15px);
+    }
+}
