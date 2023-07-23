@@ -1,0 +1,417 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    transform: scale(95%);
+  }
+  100% {
+    transform: scale(102%);
+  }
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(95%);
+  }
+  100% {
+    transform: scale(102%);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 100%;
+  }
+  0% {
+    opacity: 0%;
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 100%;
+  }
+  0% {
+    opacity: 0%;
+  }
+}
+body {
+  background: #0c0f18;
+  width: 100vw-var(--scrollbarWidth);
+  margin-inline: auto;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+nav {
+  width: 100%;
+  background-color: #242527;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(14px, 2.8vw, 20px);
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2%;
+  padding-right: 3%;
+  position: relative;
+}
+nav .logo {
+  display: flex;
+  height: 100%;
+  padding: 1.2%;
+  padding-block: 0.5rem;
+  cursor: pointer;
+}
+nav .wheel {
+  -webkit-animation: rotate 10s infinite linear;
+          animation: rotate 10s infinite linear;
+}
+nav .wheel.load {
+  -webkit-animation: rotate 500ms infinite linear;
+          animation: rotate 500ms infinite linear;
+}
+nav .wizards {
+  padding-top: 4%;
+}
+nav .dropDowns * {
+  cursor: pointer;
+  transition: all 100ms;
+}
+nav .dropDowns details[open] summary {
+  color: #016fb9;
+  border: none;
+}
+nav .dropDowns details[open] ul {
+  -webkit-animation: popup 500;
+          animation: popup 500;
+}
+nav .dropDowns details summary {
+  color: #ffffff;
+  font-weight: normal;
+  position: relative;
+  padding: 0.2em;
+  border-radius: 0.5em;
+  border: 0.1px solid rgba(255, 255, 255, 0.163);
+}
+nav .dropDowns details summary:hover {
+  color: #016fb9;
+}
+nav .dropDowns details ul {
+  z-index: 3;
+  position: absolute;
+  background: #242527;
+  padding: 0.2em 0.2em;
+  top: 100%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0.5rem;
+  background: rgb(48, 48, 48);
+  border: 0.1px solid rgba(255, 255, 255, 0.163);
+}
+nav .dropDowns details ul li {
+  list-style: none;
+  padding: 0.4em 0.8em;
+  color: #ffffff;
+  border-radius: 0.5em;
+}
+nav .dropDowns details ul li a {
+  all: unset;
+}
+nav .dropDowns details ul li:hover {
+  background: #ffffff;
+  color: #242527;
+}
+
+hero {
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+hero .front {
+  background: rgba(0, 0, 0, 0.308);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+hero .front div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5%;
+  padding-right: 20%;
+}
+hero .front div h2,
+hero .front div p {
+  color: #ffffff;
+}
+hero .front div h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(20px, 5vw, 35px);
+  padding-bottom: 1%;
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms forwards;
+          animation: fadeIn 500ms forwards;
+}
+hero .front div p {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(14px, 2.8vw, 20px);
+  padding-bottom: 5%;
+  opacity: 0;
+  -webkit-animation: fadeIn 500ms 500ms forwards;
+          animation: fadeIn 500ms 500ms forwards;
+}
+hero .front div button {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(12px, 2.6vw, 18px);
+  font-weight: bold;
+  padding: 0.5em;
+  background: none;
+  border-radius: 1em;
+  border: 1px solid #ffffff;
+  -webkit-animation: popup 500ms;
+          animation: popup 500ms;
+}
+hero .front div button:hover {
+  background: #ffffff;
+  color: #242527;
+}
+hero .front div button.clicked {
+  background-color: #00a896;
+  border: none;
+}
+hero .front div button.clicked:hover {
+  color: #ffffff;
+}
+hero img.hero__bg {
+  width: 100%;
+}
+
+content {
+  display: block;
+  margin-top: 1em;
+  width: 100%;
+  padding-left: 0.2em;
+}
+content .arrivals h3 {
+  padding-block: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(16px, 3.5vw, 27px);
+}
+content .arrivals sec1 {
+  padding-inline: 0.1em;
+  display: grid;
+  overflow-x: scroll;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+}
+content .arrivals sec1 div {
+  display: grid;
+  background: #242527;
+  border-radius: 1em;
+  padding: 0.2em;
+}
+content .arrivals sec1 div img {
+  border-radius: 1em;
+}
+content .arrivals sec1 div p {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(14px, 2.8vw, 18px);
+  padding-left: 0.5em;
+  padding-block: 0.5em;
+}
+content .about {
+  padding-top: 1em;
+  display: grid;
+  justify-items: center;
+}
+content .about h3 {
+  padding-block: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(16px, 3.5vw, 27px);
+}
+content .about sec1 {
+  display: grid;
+  row-gap: 1rem;
+  width: 80%;
+}
+@media (min-width: 560px) {
+  content .about sec1 {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+  }
+}
+content .about sec1 div {
+  background: #242527;
+  border-radius: 1rem;
+  display: grid;
+  justify-items: center;
+  padding: 2rem;
+}
+content .about sec1 div img {
+  width: 50%;
+  pointer-events: none;
+}
+content .about sec1 div .roundedImage {
+  border-radius: 100vw;
+}
+content .about sec1 div .roundedImage2 {
+  border-radius: 2em;
+}
+content .about sec1 div h4 {
+  padding-top: 1em;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(15px, 3vw, 25px);
+}
+content .about sec1 div p {
+  padding-top: 0.5em;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(14px, 2.8vw, 20px);
+  text-align: center;
+}
+content .patners {
+  width: 100%;
+  padding-top: 1em;
+  display: grid;
+  justify-content: center;
+}
+content .patners h3 {
+  padding-block: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(16px, 3.5vw, 27px);
+  text-align: center;
+}
+content .patners sec1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+  row-gap: 1em;
+  font-size: clamp(14px, 2.8vw, 20px);
+}
+content .patners sec1 a {
+  all: unset;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: #242527;
+  transition: all 100ms;
+}
+content .patners sec1 a:hover {
+  background: #016fb9;
+  color: #242527;
+}
+content .patners sec1 img {
+  height: 2.5em;
+  border-radius: 0.5rem;
+  pointer-events: none;
+}
+content .patners sec1 p {
+  padding-inline: 0.5em;
+  font-family: "Lato", sans-serif;
+}
+@media (min-width: 560px) {
+  content .patners sec1 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+content .branches {
+  padding-top: 1em;
+  display: grid;
+  justify-content: center;
+}
+content h3 {
+  text-align: center;
+  padding-block: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(16px, 3.5vw, 27px);
+}
+content table {
+  width: 100%;
+  border-radius: 0.5em;
+  text-align: center;
+}
+content table th {
+  width: 30%;
+  border: 1px solid #00a896;
+  background: #242527;
+  padding-block: 0.5em;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(14px, 2.8vw, 20px);
+}
+@media (min-width: 500px) {
+  content table th {
+    padding-inline: 1em;
+  }
+}
+content table td {
+  padding: 0.2em 0;
+  border-bottom: 1px solid #00a896;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(14px, 2.8vw, 20px);
+}
+@media (min-width: 500px) {
+  content table td {
+    padding-inline: 1em;
+  }
+}
+
+footer {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(10px, 2.2vw, 16px);
+  margin-top: 2em;
+  background: #242527;
+  height: 3.2em;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 0.5em;
+  align-items: center;
+}
+footer .contact {
+  display: grid;
+  grid-auto-flow: column;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+}
+footer .contact img {
+  width: 1.5em;
+}
+footer .contact a {
+  color: rgb(189, 189, 189);
+}
+footer .contact a:hover {
+  color: #ffffff;
+}
+footer .contact div,
+footer .contact a {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
